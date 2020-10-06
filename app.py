@@ -47,15 +47,13 @@ def issue():
             post_url = data['comment']['issue_url'] + '/comments'
             repo = data['repository']['name']
             issue_no = data['issue']['number']
-            print("")
-            print(post_url)
+            print("\n" + post_url)
 
             comment_body = "Here's what I found on the web for **" + query + "** - \n\n"
             for site_url in links:
                 comment_body = comment_body + "• " + site_url + "\n"
             comment_body = comment_body + "\n" + "Triggered by @" + user_name
-            print("")
-            print(comment_body)
+            print("\n" + comment_body)
 
             g.get_user(user_name).get_repo(repo).get_issue(issue_no).create_comment(comment_body)
 

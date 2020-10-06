@@ -1,4 +1,4 @@
-# [Autolinks]()
+# [Autolinks](https://github.com/prakhargurunani/Autolinks)
 ![Autolinks-Logo](logos/logo_transparent.png)
 A utility tool to help you instantly, anytime.
 
