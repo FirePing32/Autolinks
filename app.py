@@ -57,12 +57,6 @@ def issue():
 
             g.get_user(user_name).get_repo(repo).get_issue(issue_no).create_comment(comment_body)
 
-            '''
-            payload = {'username': 'abbfb0bc4aa4a63ea021cf4070d8475f609fd903'}
-            r = requests.post(url = post_url, data=comment_body.encode('utf-8'), params=payload)
-            print(r.text)
-            '''
-
         except Exception as e:
             print(e)
             user_name = data['issue']['user']['login']
