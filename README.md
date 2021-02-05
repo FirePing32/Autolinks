@@ -1,10 +1,8 @@
 # [Autolinks](https://github.com/prakhargurunani/Autolinks)
 ![Autolinks-Logo](logos/logo_transparent.png)
-A utility tool to help you instantly, anytime.
+A GitHub app for web scraping
 
 ## About
-Tom is a curious developer. He wanted to contribute to a project on GitHub. He found X issues in a project. He then created an issue for the same. Phil, the project manager, is a very busy man with very less time to manage the issues page of the project. He viewed Tom's issue and wanted to give some reference to him about where he can start working on those issues. So, he used @Autolinks to help Tom.
-
 _Autolink lets you instantly share web links related to a particular topic by just using keywords._
 
 ## Installation
@@ -25,6 +23,8 @@ Here,
 `@Autolinks Win 7 DLL file error 5` will return first `5` search results related to the topic `Win 7 DLL file error`.
 
 ![Example](Usage-Tutorial.gif)
+
+You can also test it live [here](https://github.com/FirePing32/Autolinks/issues/2#issue-comment-box).
 
 ## Private Repositories
 This app will only work for publicly hosted repositories. So if you are looking to deploy a fork or **use the app for private repositories**, [here are the instructions](https://github.com/prakhargurunani/Autolinks/wiki/Instructions-to-deploy-a-fork).
