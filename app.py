@@ -51,7 +51,7 @@ def issue():
 
             comment_body = "Here's what I found on the web for **" + query + "** - \n\n"
             for site_url in links:
-                comment_body = comment_body + "• " + site_url + "\n"
+                comment_body = comment_body + "- " + site_url + "\n"
             comment_body = comment_body + "\n" + "Triggered by @" + user_name
             print("\n" + comment_body)
 
