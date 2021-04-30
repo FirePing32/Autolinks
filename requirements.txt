@@ -23,6 +23,6 @@ rsa==4.1
 six==1.13.0
 soupsieve==1.9.5
 uritemplate==3.0.1
-urllib3==1.25.7
+urllib3==1.25.8
 Werkzeug==0.16.0
 wrapt==1.11.2
