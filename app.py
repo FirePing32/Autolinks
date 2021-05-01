@@ -5,10 +5,7 @@ from flask import Flask, jsonify, request
 from github import Github
 from googlesearch import search
 
-DEBUG = True
-
 app = Flask(__name__)
-app.config.from_object(__name__)
 
 message_1 = "Here's what I found on the web for **"
 message_2 = "Oops ! An error occured while processing data. \
@@ -23,8 +20,7 @@ def issue():
     g = Github(secret)
 
     data = json.loads(request.data)
-    raw_comment = data["comment"]["body"]
-    comment = raw_comment
+    comment = data["comment"]["body"]
     print(comment)
 
     if "@Autolinks" in comment:
