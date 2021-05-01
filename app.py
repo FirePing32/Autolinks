@@ -10,6 +10,11 @@ DEBUG = True
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+message_1 = "Here's what I found on the web for **"
+message_2 = "Oops ! An error occured while processing data. \
+Please follow the guidelines about how to use this bot \
+--> https://github.com/prakhargurunani/Autolinks"
+
 
 @app.route("/github/callback", methods=["POST"])
 def issue():
@@ -51,13 +56,15 @@ def issue():
             issue_no = data["issue"]["number"]
             print("\n" + post_url)
 
-            comment_body = "Here's what I found on the web for **" + query + "** - \n\n"
+            comment_body = message_1 + query + "** - \n\n"
             for site_url in links:
                 comment_body = comment_body + "- " + site_url + "\n"
             comment_body = comment_body + "\n" + "Triggered by @" + user_name
             print("\n" + comment_body)
 
-            g.get_user(user_name).get_repo(repo).get_issue(issue_no).create_comment(
+            g.get_user(user_name).get_repo(repo).get_issue(
+                issue_no
+            ).create_comment(
                 comment_body
             )
 
@@ -67,8 +74,10 @@ def issue():
             post_url = data["comment"]["issue_url"] + "/comments"
             repo = data["repository"]["name"]
             issue_no = data["issue"]["number"]
-            g.get_user(user_name).get_repo(repo).get_issue(issue_no).create_comment(
-                "Oops ! An error occured while processing data. Please follow the guidelines about how to use this bot --> https://github.com/prakhargurunani/Autolinks"
+            g.get_user(user_name).get_repo(repo).get_issue(
+                issue_no
+            ).create_comment(
+                message_2
             )
 
     return jsonify("Method not allowed")
