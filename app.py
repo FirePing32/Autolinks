@@ -12,7 +12,7 @@ app = Flask(__name__)
 message_1 = "Here's what I found on the web for **"
 message_2 = "Oops ! An error occured while processing data. \
 Please follow the guidelines about how to use this bot \
---> https://github.com/prakhargurunani/Autolinks"
+--> https://github.com/FirePing32/Autolinks"
 
 
 def get_title(url: str):
