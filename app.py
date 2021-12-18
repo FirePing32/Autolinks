@@ -34,7 +34,7 @@ def issue():
         try:
 
             num = int(comment[-1])
-            query = comment[11:-2]
+            query = comment[6:-2]
             links = []
 
             for j in search(query, tld="com", num=10, stop=num, pause=2):
@@ -49,7 +49,7 @@ def issue():
             comment_body = message_1 + query + "** - \n\n"
             for site_url in links:
                 comment_body = comment_body + "- " + site_url + "\n"
-            comment_body = comment_body
+            comment_body = comment_body + "\n" + f"Triggered by @{data['sender']['login']}"
             print("\n" + comment_body)
 
             g.get_user(user_name).get_repo(repo).get_issue(
