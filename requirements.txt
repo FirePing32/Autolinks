@@ -1,6 +1,8 @@
 beautifulsoup4==4.8.2
 certifi==2019.11.28
+cffi==1.15.0
 chardet==3.0.4
+charset-normalizer==2.0.9
 Click==7.0
 Deprecated==1.2.7
 Flask==1.1.1
@@ -14,8 +16,12 @@ MarkupSafe==1.1.1
 protobuf==3.11.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
+pycparser==2.21
 PyGithub==1.45
 PyJWT==1.7.1
+PyNaCl==1.4.0
+pyparsing==2.4.7
+python-dotenv==0.19.2
 pytz==2019.3
 rauth==0.7.3
 requests==2.22.0
